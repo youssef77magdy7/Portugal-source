@@ -2,13 +2,18 @@ import os
 import asyncio
 from telethon import TelegramClient, events
 from telethon.tl.functions.channels import CreateChannelRequest, InviteToChannelRequest, EditAdminRequest, LeaveChannelRequest
-from telethon.tl.functions.account import UpdateProfileRequest # ده البديل لـ EditAboutRequest
+from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.types import ChatAdminRights
 from telethon.tl.functions.messages import DeleteMessagesRequest
 
+# حط بياناتك هنا مباشرة
+API_ID = 24576280
+API_HASH = "2d331fea63e2dfeb0d2c2cf71a9a0cc9" 
+SESSION_NAME = "portugal_jo"
 
-# تشغيل الجلسة والاتصال بتليجرام
+# السطر ده هو اللي كان فيه المشكلة، الحين هيشتغل
 client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
+
 
 # متغيرات السورس الشاملة
 AFK_STATUS = False

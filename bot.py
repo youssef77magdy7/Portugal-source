@@ -1,12 +1,11 @@
 import os
-import time
-import random
 import asyncio
 from telethon import TelegramClient, events
-from telethon.tl.functions.channels import CreateChannelRequest, EditAboutRequest, InviteToChannelRequest, EditAdminRequest, LeaveChannelRequest
+from telethon.tl.functions.channels import CreateChannelRequest, InviteToChannelRequest, EditAdminRequest, LeaveChannelRequest
+from telethon.tl.functions.account import UpdateProfileRequest # ده البديل لـ EditAboutRequest
 from telethon.tl.types import ChatAdminRights
 from telethon.tl.functions.messages import DeleteMessagesRequest
-from config import API_ID, API_HASH, SESSION_NAME
+
 
 # تشغيل الجلسة والاتصال بتليجرام
 client = TelegramClient(SESSION_NAME, API_ID, API_HASH)
